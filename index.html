@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#F4F3EF">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<title>Mustafa Alkeissy — Product Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: only light;
+  --paper:#F4F3EF; --ink:#141311; --muted:#8B877E;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#F4F3EF !important}
+body{
+  font-family:"PP Neue Montreal","Schibsted Grotesk",Helvetica,Arial,sans-serif;
+  color:var(--ink);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.pad{padding-left:clamp(16px,3vw,40px);padding-right:clamp(16px,3vw,40px)}
+
+/* ---------- nav: minimal, alltid närvarande ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px clamp(16px,3vw,40px);
+  font-size:.88rem;font-weight:500;
+  mix-blend-mode:difference;color:#fff;
+}
+nav a{color:#fff}
+.nav-r{display:flex;gap:1.5rem}
+
+/* ---------- hero: fullbleed media, minimal text ---------- */
+.hero{position:relative;height:100svh;overflow:hidden}
+.hero .media{position:absolute;inset:0}
+.hero .canvas{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(130% 100% at 20% 0%,#B4AB99 0%,transparent 55%),
+    radial-gradient(110% 90% at 90% 100%,#6E675B 0%,transparent 60%),
+    linear-gradient(160deg,#9C937F,#5C564C);
+  animation:drift 16s ease-in-out infinite alternate;
+}
+@keyframes drift{to{transform:scale(1.07)}}
+.hero .txt{
+  position:absolute;left:clamp(16px,3vw,40px);right:clamp(16px,3vw,40px);
+  bottom:clamp(20px,4vh,40px);color:#fff;
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:.8rem;
+}
+.hero h1{font-size:clamp(2rem,5.5vw,4.2rem);font-weight:500;letter-spacing:-0.03em;line-height:1.03;max-width:14em}
+.hero .sub{font-size:.85rem;opacity:.85}
+.vidtag{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.35;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+
+/* ---------- grid: bilderna ÄR sidan ---------- */
+.grid{display:grid;gap:clamp(10px,1.2vw,16px);padding:clamp(10px,1.2vw,16px) clamp(10px,1.2vw,16px) 0}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.tile{position:relative;display:block;overflow:hidden;background:#E6E2D9}
+.tile.full{grid-column:1/-1;aspect-ratio:4/5}
+@media(min-width:760px){.tile.full{aspect-ratio:21/10}}
+.tile.half{aspect-ratio:4/5}
+.tile .canvas{position:absolute;inset:0;transition:transform 1s var(--ease)}
+.tile:hover .canvas{transform:scale(1.04)}
+.tile .cap{
+  position:absolute;left:16px;right:16px;bottom:14px;color:#fff;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  font-size:.9rem;font-weight:500;
+}
+.tile .cap small{font-weight:400;opacity:.8;font-size:.78rem;text-align:right}
+.tile .imgnote{position:absolute;top:14px;left:16px;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;opacity:.4}
+
+/* platshållar-"foton": mörkare, fotografiska toner så texten funkar som på riktiga bilder */
+.c-kiaro{background:radial-gradient(120% 90% at 25% 10%,#A98E6C 0%,transparent 55%),linear-gradient(160deg,#8A7357,#4E4234)}
+.c-ron{background:radial-gradient(120% 90% at 70% 15%,#BDB3A0 0%,transparent 55%),linear-gradient(160deg,#9E9482,#57503F)}
+.c-hold{background:radial-gradient(120% 90% at 30% 20%,#A9ABAF 0%,transparent 55%),linear-gradient(160deg,#8E9095,#4A4C50)}
+.c-eira{background:radial-gradient(120% 90% at 70% 10%,#C29A78 0%,transparent 55%),linear-gradient(160deg,#A07C5C,#54402E)}
+
+/* ---------- intro-rad mellan hero och grid ---------- */
+.intro{padding:clamp(56px,9vh,110px) clamp(16px,3vw,40px)}
+.intro p{
+  font-size:clamp(1.5rem,4vw,2.7rem);font-weight:500;letter-spacing:-0.03em;line-height:1.15;
+  max-width:26em;
+}
+.intro p span{color:var(--muted)}
+
+/* ---------- about + footer ---------- */
+.about{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px);display:grid;gap:2rem}
+@media(min-width:860px){.about{grid-template-columns:1fr 2fr}}
+.label{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.about p{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:36em;color:#33312C}
+.about p+p{margin-top:1em}
+
+footer{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px) 28px}
+.big-mail{
+  display:block;font-size:clamp(1.6rem,7vw,5rem);font-weight:500;letter-spacing:-0.04em;line-height:1;
+  margin-top:.8rem;word-break:break-all;transition:color .3s;
+}
+.big-mail:hover{color:var(--muted)}
+.foot-row{display:flex;flex-wrap:wrap;gap:.6rem 2.5rem;justify-content:space-between;margin-top:clamp(40px,7vh,72px);font-size:.8rem;color:var(--muted)}
+
+/* ---------- motion ---------- */
+.r{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.r.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}.hero .canvas{animation:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top">Mustafa Alkeissy</a>
+  <div class="nav-r">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="mailto:Mustafa.alkeissy@gmail.com">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO: fullskärmsvideo, text direkt på median -->
+<header class="hero" id="top">
+  <div class="media"><div class="canvas"></div><span class="vidtag">Hero-video</span></div>
+  <div class="txt">
+    <h1 class="r in">I design things by asking<br>who they're for.<br>Then I build them properly.</h1>
+    <span class="sub">Jönköping / Stockholm</span>
+  </div>
+</header>
+
+<!-- En mening. Sen bilder. -->
+<section class="intro">
+  <p class="r">Product developer and furniture designer. I work in CAD, prototypes and materials that do real work instead of decoration. <span>This autumn I also teach SolidWorks at Jönköping University.</span></p>
+</section>
+
+<!-- WORK: bildgrid, caption på bilden -->
+<main class="grid" id="work">
+  <a class="tile full r" href="#">
+    <div class="canvas c-kiaro"></div>
+    <span class="imgnote">Bild: Kiaro gruppbild</span>
+    <span class="cap">Kiaro<small>Biocomposite kitchenware · Yellon AB · 2026</small></span>
+  </a>
+  <a class="tile half r" href="#">
+    <div class="canvas c-ron"></div>
+    <span class="imgnote">Bild: RØN</span>
+    <span class="cap">RØN<small>Lounge chair · steel &amp; bouclé</small></span>
+  </a>
+  <a class="tile half r" href="#">
+    <div class="canvas c-hold"></div>
+    <span class="imgnote">Bild: HOLD</span>
+    <span class="cap">HOLD<small>Mechanical door stop</small></span>
+  </a>
+  <a class="tile full r" href="#">
+    <div class="canvas c-eira"></div>
+    <span class="imgnote">Bild: EIRA</span>
+    <span class="cap">EIRA<small>Leather · repairability</small></span>
+  </a>
+</main>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <span class="label">About</span>
+  <div>
+    <p class="r">As a kid I took apart broken vacuum cleaners to see how they worked. Some of them even survived. That curiosity never left, it just got tolerances.</p>
+    <p class="r">Before design I spent five years running my own practice, listening to people for a living. Turns out listening and building need each other. My thesis Kiaro tested if liquid wood can feel premium: six kitchenware pieces in Arboblend, developed with Yellon AB. The Öhrskog Foundation thought so too and gave it a scholarship.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer>
+  <span class="label">Say hello</span>
+  <a class="big-mail r" href="mailto:Mustafa.alkeissy@gmail.com">Mustafa.alkeissy<br>@gmail.com</a>
+  <div class="foot-row">
+    <span>Jönköping / Stockholm, Sweden</span>
+    <a href="#">LinkedIn</a>
+    <span>© 2026 Mustafa Alkeissy</span>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
