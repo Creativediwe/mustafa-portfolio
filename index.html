@@ -45,6 +45,7 @@ nav a{color:#fff}
   animation:drift 16s ease-in-out infinite alternate;
 }
 @keyframes drift{to{transform:scale(1.07)}}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero .txt{
   position:absolute;left:clamp(16px,3vw,40px);right:clamp(16px,3vw,40px);
   bottom:clamp(20px,4vh,40px);color:#fff;
@@ -120,7 +121,12 @@ footer{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px) 28px}
 
 <!-- HERO: fullskärmsvideo, text direkt på median -->
 <header class="hero" id="top">
-  <div class="media"><div class="canvas"></div><span class="vidtag">Hero-video</span></div>
+  <div class="media">
+    <div class="canvas"></div>
+    <video autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg">
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="txt">
     <h1 class="r in">Before I design,<br>I try to understand<br>what matters.</h1>
     <span class="sub">Jönköping / Stockholm</span>
