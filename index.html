@@ -62,6 +62,7 @@ nav a{color:#fff}
 @media(min-width:760px){.tile.full{aspect-ratio:21/10}}
 .tile.half{aspect-ratio:4/5}
 .tile .canvas{position:absolute;inset:0;transition:transform 1s var(--ease)}
+.tile img.canvas{width:100%;height:100%;object-fit:cover}
 .tile:hover .canvas{transform:scale(1.04)}
 .tile .cap{
   position:absolute;left:16px;right:16px;bottom:14px;color:#fff;
@@ -139,13 +140,11 @@ footer{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px) 28px}
     <span class="cap">Kiaro<small>Biocomposite kitchenware · Yellon AB · 2026</small></span>
   </a>
   <a class="tile half r" href="ron.html">
-    <div class="canvas c-ron"></div>
-    <span class="imgnote">Bild: RØN</span>
+    <img class="canvas" src="images/ron-form.jpg" alt="RØN lounge chair in ash, steel and bouclé">
     <span class="cap">RØN<small>Lounge chair · steel &amp; bouclé</small></span>
   </a>
   <a class="tile half r" href="hold.html">
-    <div class="canvas c-hold"></div>
-    <span class="imgnote">Bild: HOLD</span>
+    <img class="canvas" src="images/hold.jpg" alt="HOLD mechanical door stop in machined metal">
     <span class="cap">HOLD<small>Mechanical door stop</small></span>
   </a>
   <a class="tile full r" href="eira.html">
