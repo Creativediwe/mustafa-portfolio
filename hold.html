@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#F4F3EF">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<title>HOLD — Mustafa Alkeissy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:only light;--paper:#F4F3EF;--ink:#141311;--muted:#8B877E;--line:#E2DFD8;--a:#7A2E2A;--ease:cubic-bezier(.22,1,.36,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#F4F3EF!important}
+body{font-family:"PP Neue Montreal","Schibsted Grotesk",Helvetica,Arial,sans-serif;color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.pad{padding-left:clamp(16px,3vw,40px);padding-right:clamp(16px,3vw,40px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px clamp(16px,3vw,40px);font-size:.88rem;font-weight:500;mix-blend-mode:difference;color:#fff}
+nav a{color:#fff}
+.nav-r{display:flex;gap:1.5rem}
+.label{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+.hero{position:relative;height:100svh;overflow:hidden}
+.hero .media{position:absolute;inset:0}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.06)}}
+.hero .txt{position:absolute;left:clamp(16px,3vw,40px);right:clamp(16px,3vw,40px);bottom:clamp(20px,4vh,40px);color:#fff}
+.hero .ey{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:.6rem}
+.hero h1{font-size:clamp(3rem,12vw,8rem);font-weight:500;letter-spacing:-0.04em;line-height:.95}
+.hero .q{font-size:clamp(1rem,2.4vw,1.4rem);margin-top:.8rem;max-width:24em;opacity:.9}
+
+.back{display:inline-flex;gap:.5rem;padding:110px 0 0;font-size:.9rem;font-weight:500}
+.back u{text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+
+.intro{padding:clamp(48px,8vh,90px) clamp(16px,3vw,40px) clamp(32px,5vh,56px)}
+.intro .lede{font-size:clamp(1.5rem,4vw,2.6rem);font-weight:500;letter-spacing:-0.03em;line-height:1.15;max-width:20em}
+.intro .lede span{color:var(--muted)}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.4rem;margin-top:clamp(32px,5vh,56px);padding-top:1.5rem;border-top:1px solid var(--ink)}
+.meta b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:.35rem}
+
+section{padding:clamp(48px,8vh,90px) 0}
+.sec-h{padding:0 clamp(16px,3vw,40px);margin-bottom:clamp(28px,4vh,48px)}
+.sec-h h2{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:500;letter-spacing:-0.03em;margin-top:.6rem;max-width:16em}
+.sec-h p{max-width:34em;color:#33312C;margin-top:1rem}
+
+.full{position:relative;margin:0 clamp(10px,1.2vw,16px);aspect-ratio:4/5;overflow:hidden;background:#EDEAE3}
+@media(min-width:760px){.full{aspect-ratio:21/10}}
+.grid2{display:grid;gap:clamp(10px,1.2vw,16px);padding:0 clamp(10px,1.2vw,16px)}
+@media(min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+.tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:#EDEAE3}
+.grid3{display:grid;gap:clamp(10px,1.2vw,16px);padding:0 clamp(10px,1.2vw,16px)}
+@media(min-width:640px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.tile img,.full img,.full video{width:100%;height:100%;object-fit:cover;display:block}
+
+.data{padding:clamp(48px,8vh,90px) clamp(16px,3vw,40px);border-top:1px solid var(--ink)}
+.data .row{display:grid;gap:clamp(20px,4vw,48px)}
+@media(min-width:760px){.data .row{grid-template-columns:repeat(3,1fr)}}
+.stat b{display:block;font-size:clamp(2.4rem,6vw,4rem);font-weight:500;letter-spacing:-0.03em;line-height:1;color:var(--a)}
+.stat span{display:block;margin-top:.6rem;color:#33312C;font-size:.95rem;max-width:18em}
+
+.princ{padding:clamp(48px,8vh,90px) clamp(16px,3vw,40px)}
+.princ ol{list-style:none;margin-top:1.5rem;max-width:36em}
+.princ li{display:flex;gap:1rem;align-items:baseline;padding:1rem 0;border-top:1px solid var(--line);font-size:clamp(1.1rem,2.4vw,1.5rem)}
+.princ li:last-child{border-bottom:1px solid var(--line)}
+.princ .n{font-variant-numeric:tabular-nums;color:var(--muted);font-size:.9rem;min-width:2ch}
+
+.refl{padding:clamp(48px,8vh,90px) clamp(16px,3vw,40px);border-top:1px solid var(--ink)}
+.refl p{font-size:clamp(1.3rem,3vw,2rem);font-weight:500;letter-spacing:-0.02em;line-height:1.25;max-width:22em}
+.refl p+p{margin-top:1.4rem}
+.refl p span{color:var(--muted)}
+
+.next{padding:clamp(56px,9vh,110px) clamp(16px,3vw,40px);border-top:1px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:1rem}
+.next a{font-size:clamp(1.8rem,6vw,3.5rem);font-weight:500;letter-spacing:-0.03em;border-bottom:2px solid var(--ink)}
+
+.r{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.r.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}.hero img{animation:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Mustafa Alkeissy</a>
+  <div class="nav-r"><a href="index.html#work">Work</a><a href="about.html">About</a><a href="mailto:Mustafa.alkeissy@gmail.com">Contact</a></div>
+</nav>
+
+<header class="hero">
+  <div class="media"><img src="images/hold.jpg" alt="HOLD mechanical door holder, machined metal render"></div>
+  <div class="txt">
+    <div class="ey">Mechanical door holder · Independent project</div>
+    <h1>HOLD</h1>
+    <p class="q">Holds the door. Leaves no mark.</p>
+  </div>
+</header>
+
+<div class="pad"><a class="back" href="index.html#work"><span>←</span><u>Back to work</u></a></div>
+
+<section class="intro">
+  <p class="lede r">A portable door holder with a spring-loaded snap-lock in a compact housing. <span>It clamps onto the door, holds it open on plain friction, and comes off without leaving a trace.</span></p>
+  <div class="meta">
+    <div class="r"><b>Project</b>Independent project · Product development</div>
+    <div class="r"><b>Role</b>Everything. Concept, mechanism, CAD, prototyping and testing.</div>
+    <div class="r"><b>Duration</b>Three weeks</div>
+    <div class="r"><b>Status</b>Working prototype, 3D-printed and tested on a real door</div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-h">
+    <div class="label">The challenge</div>
+    <h2 class="r">Hold a door still, without touching a screwdriver.</h2>
+    <p class="r">The whole problem is force without damage. HOLD had to clamp onto a door with no drilling and no permanent mounting, keep a consistent grip through repeated use and dynamic loads like wind, and stay planted on the floor. That meant the spring-loaded arm had to press down hard enough for friction to do the holding, while the snap-lock gave the arm fixed positions without piling on mechanical complexity.</p>
+  </div>
+  <div class="full r"><img src="images/hold-door-active.jpg" alt="3D-printed HOLD prototype clamped on a door, arm deployed against the floor"></div>
+</section>
+
+<section>
+  <div class="sec-h">
+    <div class="label">How it works</div>
+    <h2 class="r">A snap-lock for position. A spring for grip.</h2>
+    <p class="r">The snap-lock sets the arm in a defined position. The spring-loaded arm transfers force downward into the floor, and friction does the rest. The housing geometry routes the load from the door through the structural body and the clamp interface, so the door itself never carries anything it was not built for.</p>
+  </div>
+  <div class="grid2">
+    <div class="tile r"><img src="images/hold-render-spring.jpg" alt="Render of HOLD showing the spring and snap-lock arm"></div>
+    <div class="tile r"><img src="images/hold-render-side.jpg" alt="Side profile render of HOLD with the arm deployed"></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-h">
+    <div class="label">In motion</div>
+    <h2 class="r">One hand. Snap down, lift off.</h2>
+    <p class="r">This is the 3D-printed prototype working on a real door. Snap the arm down and the door stays where you left it. Lift the arm and walk through.</p>
+  </div>
+  <div class="full r"><video autoplay muted loop playsinline preload="metadata"><source src="videos/hold-demo.mp4" type="video/mp4"></video></div>
+</section>
+
+<section>
+  <div class="sec-h">
+    <div class="label">Process</div>
+    <h2 class="r">Three concepts went in. One came out.</h2>
+    <p class="r">I developed three mechanical concepts and scored them against each other before committing to a force logic. The winner combined the snap-lock with the spring arm. From there the complete assembly was modelled in CAD to check alignment, tolerance stacking and load paths, then refined over iterations to cut mechanical play without losing the compact proportions. The prototype was printed, clamped onto a door, and tested.</p>
+  </div>
+  <div class="grid3">
+    <div class="tile r"><img src="images/hold-proto-1.jpg" alt="3D-printed HOLD prototype showing spring and arm"></div>
+    <div class="tile r"><img src="images/hold-proto-2.jpg" alt="3D-printed HOLD prototype, side view of housing and arm"></div>
+    <div class="tile r"><img src="images/hold-door-locked.jpg" alt="HOLD prototype clamped on a door edge with the arm locked up"></div>
+  </div>
+</section>
+
+<section class="data">
+  <div class="label" style="margin-bottom:2rem">The numbers</div>
+  <div class="row">
+    <div class="stat r"><b>3</b><span>weeks from first sketch to a working prototype on a door.</span></div>
+    <div class="stat r"><b>3</b><span>mechanical concepts evaluated before committing to one force logic.</span></div>
+    <div class="stat r"><b>0</b><span>holes in the door. The clamp mounts without tools and comes off clean.</span></div>
+  </div>
+</section>
+
+<section class="princ">
+  <div class="label">What I took from it</div>
+  <ol>
+    <li class="r"><span class="n">01</span>In a compact mechanism, tolerances are the design. Small geometric deviations show up as play immediately.</li>
+    <li class="r"><span class="n">02</span>Friction is a system, not a number. Spring force, floor material and wear all get a vote.</li>
+    <li class="r"><span class="n">03</span>A prototype on a real door answers questions a CAD model can only guess at.</li>
+  </ol>
+</section>
+
+<section class="refl">
+  <div class="label" style="margin-bottom:1.5rem">Reflection</div>
+  <p class="r">HOLD sharpened how I think about force in small mechanisms. <span>Getting the snap-lock and the spring arm to share one load path took precise tolerance control — every deviation showed up as play or misalignment.</span></p>
+  <p class="r">Friction-based holding is sensitive by nature. <span>If I took HOLD to production, I would start with fatigue testing of the spring and refining the rotating interfaces, because long-term durability lives exactly there.</span></p>
+</section>
+
+<div class="next">
+  <span class="label">Next</span>
+  <a href="kiaro.html">Kiaro →</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
