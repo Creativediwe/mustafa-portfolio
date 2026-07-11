@@ -64,6 +64,7 @@ nav a{color:#fff}
 .tile.half{aspect-ratio:4/5}
 .tile .canvas{position:absolute;inset:0;transition:transform 1s var(--ease)}
 .tile img.canvas{width:100%;height:100%;object-fit:cover}
+@media(max-width:759px){.tile.nocrop{aspect-ratio:auto}.tile.nocrop img.canvas{position:static;height:auto}}
 .tile:hover .canvas{transform:scale(1.04)}
 .tile .cap{
   position:absolute;left:16px;right:16px;bottom:14px;color:#fff;
@@ -141,7 +142,7 @@ footer{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px) 28px}
 
 <!-- WORK: bildgrid, caption på bilden -->
 <main class="grid" id="work">
-  <a class="tile full r" href="kiaro.html">
+  <a class="tile full nocrop r" href="kiaro.html">
     <img class="canvas" src="images/kiaro-thumb.jpg" alt="Kiaro salad bowl in Arboblend biocomposite">
     <span class="cap">Kiaro<small>Biocomposite kitchenware · Yellon AB · 2026</small></span>
   </a>
