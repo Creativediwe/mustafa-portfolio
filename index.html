@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="only light">
 <title>Mustafa Alkeissy — Product Developer</title>
+<meta name="description" content="Portfolio of Mustafa Alkeissy, product developer and furniture designer in Sweden. Three projects from concept to manufacturable product: Kiaro, RØN and HOLD.">
+<meta property="og:title" content="Mustafa Alkeissy — Product Developer">
+<meta property="og:description" content="Product development portfolio: Kiaro, RØN and HOLD — from concept to manufacturable product.">
+<meta property="og:image" content="https://mustafaalkeissy.se/images/ron-banner.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -88,6 +96,14 @@ nav a{color:#fff}
 }
 .intro p span{color:var(--muted)}
 
+/* ---------- other work ---------- */
+.other{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px) 0}
+.ogrid{display:grid;gap:clamp(14px,1.6vw,20px);margin-top:1.4rem}
+@media(min-width:760px){.ogrid{grid-template-columns:repeat(3,1fr)}}
+.otile{position:relative;aspect-ratio:16/9;overflow:hidden;background:#E6E2D9}
+.otile img{width:100%;height:100%;object-fit:cover;display:block}
+.ocap{display:block;margin-top:.55rem;font-size:.8rem;color:var(--muted);max-width:34em}
+
 /* ---------- about + footer ---------- */
 .about{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px);display:grid;gap:2rem}
 @media(min-width:860px){.about{grid-template-columns:1fr 2fr}}
@@ -154,12 +170,17 @@ footer{padding:clamp(64px,10vh,120px) clamp(16px,3vw,40px) 28px}
     <img class="canvas" src="images/hold.jpg" alt="HOLD mechanical door stop in machined metal">
     <span class="cap">HOLD<small>Mechanical door holder</small></span>
   </a>
-  <a class="tile full r" href="eira.html">
-    <div class="canvas c-eira"></div>
-    <span class="imgnote">Bild: EIRA</span>
-    <span class="cap">EIRA<small>Coffee table · solid oak</small></span>
-  </a>
 </main>
+
+<!-- OTHER WORK -->
+<section class="other">
+  <span class="label">Other work</span>
+  <div class="ogrid">
+    <div class="r"><div class="otile"><img src="images/eira.jpg" alt="EIRA coffee table in solid oak"></div><span class="ocap">EIRA — coffee table in solid oak. Submitted to Bolia Design Awards 2025.</span></div>
+    <div class="r"><div class="otile"><img src="images/modig.jpg" alt="MODIG chair concept, moulded plywood on steel tube frame"></div><span class="ocap">MODIG — chair concept in moulded plywood and steel. CAD and KeyShot.</span></div>
+    <div class="r"><div class="otile"><img src="images/f1.jpg" alt="Formula car modelled in SolidWorks, rendered in KeyShot"></div><span class="ocap">Formula car study — surface modelling in SolidWorks, rendered in KeyShot.</span></div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
